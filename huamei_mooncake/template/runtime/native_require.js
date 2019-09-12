@@ -44,7 +44,7 @@ var game_file_list = [
 	"bin-debug/view/dealer/SelfPop.js",
 	"bin-debug/view/dealer/SubPop.js",
 	"bin-debug/view/dealer/confimPay/ConfimPayItem.js",
-	"bin-debug/view/select/SelectPop.js",
+	"bin-debug/Main.js",
 	"bin-debug/view/dealer/confimPay/PayDetailItem.js",
 	"bin-debug/view/dealer/confimPay/PayDetailPop.js",
 	"bin-debug/view/dealer/order/OrderItem.js",
@@ -79,7 +79,7 @@ var game_file_list = [
 	"bin-debug/view/select/DetailView.js",
 	"bin-debug/view/select/DownView.js",
 	"bin-debug/view/select/SelectLoginPop.js",
-	"bin-debug/Main.js",
+	"bin-debug/view/select/SelectPop.js",
 	//----auto game_file_list end----
 ];
 
