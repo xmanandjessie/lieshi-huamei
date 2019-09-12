@@ -1,0 +1,118 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>华美新年贺卡</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no"/>
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="full-screen" content="true"/>
+    <meta name="screen-orientation" content="portrait"/>
+    <meta name="x5-fullscreen" content="true"/>
+    <meta name="360-fullscreen" content="true"/>
+    <style>
+        html, body {
+            -ms-touch-action: none;
+            background: #000000;
+            padding: 0;
+            border: 0;
+            margin: 0;
+            height: 100%;
+        }
+        .wx{
+	    	display: none;
+	    	position: absolute;
+	    	top: 0%;
+	    	bottom: 0px;
+	    	left: 0px;
+	    	right: 0px;
+	    	width:100%;
+	    	height:100%;
+            text-align: center;
+    	}
+    	.wx>img{
+    		width:100%;
+            height:100%;
+    	}
+    </style>
+
+    <!--这个标签为通过egret提供的第三方库的方式生成的 javascript 文件。删除 modules_files 标签后，库文件加载列表将不会变化，请谨慎操作！-->
+    <!--modules_files_start-->
+	<script egret="lib" src="libs/modules/egret/egret.js" src-release="libs/modules/egret/egret.min.js"></script>
+	<script egret="lib" src="libs/modules/egret/egret.web.js" src-release="libs/modules/egret/egret.web.min.js"></script>
+	<script egret="lib" src="libs/modules/game/game.js" src-release="libs/modules/game/game.min.js"></script>
+	<script egret="lib" src="libs/modules/res/res.js" src-release="libs/modules/res/res.min.js"></script>
+	<script egret="lib" src="libs/modules/tween/tween.js" src-release="libs/modules/tween/tween.min.js"></script>
+	<!--modules_files_end-->
+
+    <!--这个标签为不通过egret提供的第三方库的方式使用的 javascript 文件，请将这些文件放在libs下，但不要放在modules下面。-->
+    <!--other_libs_files_start-->
+    <script egret="lib" src="libs/jquery.js" src-release="libs/jquery.js"></script>
+    <script egret="lib" src="libs/ls.js" src-release="libs/ls.js"></script>
+    <!--other_libs_files_end-->
+
+    <!--这个标签会被替换为项目中所有的 javascript 文件。删除 game_files 标签后，项目文件加载列表将不会变化，请谨慎操作！-->
+    <!--game_files_start-->
+	<script egret="game" src="bin-debug/comp/PopView.js"></script>
+	<script egret="game" src="bin-debug/comp/PopManager.js"></script>
+	<script egret="game" src="bin-debug/LightText.js"></script>
+	<script egret="game" src="bin-debug/LoadingUI.js"></script>
+	<script egret="game" src="bin-debug/Main.js"></script>
+	<script egret="game" src="bin-debug/Play.js"></script>
+	<script egret="game" src="bin-debug/PointText.js"></script>
+	<script egret="game" src="bin-debug/TipsPop.js"></script>
+	<script egret="game" src="bin-debug/UIManager.js"></script>
+	<script egret="game" src="bin-debug/comp/CustomImage.js"></script>
+	<script egret="game" src="bin-debug/comp/CustomRadioButton.js"></script>
+	<script egret="game" src="bin-debug/comp/CustomScrollView.js"></script>
+	<script egret="game" src="bin-debug/comp/Message.js"></script>
+	<script egret="game" src="bin-debug/Game.js"></script>
+	<script egret="game" src="bin-debug/CustomPop.js"></script>
+	<script egret="game" src="bin-debug/utils/AssetsUtils.js"></script>
+	<script egret="game" src="bin-debug/utils/CountData.js"></script>
+	<script egret="game" src="bin-debug/utils/ErrorCode.js"></script>
+	<script egret="game" src="bin-debug/utils/EventName.js"></script>
+	<script egret="game" src="bin-debug/utils/EventObj.js"></script>
+	<script egret="game" src="bin-debug/utils/GameDispatcher.js"></script>
+	<script egret="game" src="bin-debug/utils/Global.js"></script>
+	<script egret="game" src="bin-debug/utils/HttpService.js"></script>
+	<script egret="game" src="bin-debug/utils/Middle.js"></script>
+	<script egret="game" src="bin-debug/utils/PopUp.js"></script>
+	<script egret="game" src="bin-debug/utils/SoundManager.js"></script>
+	<script egret="game" src="bin-debug/utils/StageUtils.js"></script>
+	<!--game_files_end-->
+</head>
+<body>
+    <script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+
+    <div style="margin: auto;width: 100%;height: 100%;" class="egret-player"
+         data-entry-class="Main"
+         data-orientation="portrait"
+         data-scale-mode="exactFit"
+         data-frame-rate="30"
+         data-content-width="640"
+         data-content-height="1030"
+         data-show-paint-rect="false"
+         data-multi-fingered="2"
+         data-show-fps="false" data-show-log="false"
+         data-show-fps-style="x:0,y:0,size:12,textColor:0xffffff,bgAlpha:0.9">
+    </div>
+    <div class="wx">
+        <img id="imgHeka"></img>
+        <p style="width:100%;position: absolute;top:65%;color:white;">长按图片保存或转发给好友</p>
+    </div>
+    <!--<div class="wx">
+        <p style="padding-top:120%;color:white;text-align: center;">长按图片保存或转发给好友</p>
+    </div>-->
+    <!--<audio id="bgMusic" src="resource/assets/music/bg.mp3" loop="loop" autoplay="autoplay"></audio>-->
+    <script>
+        /**
+         * {
+         * "renderMode":, //引擎渲染模式，"canvas" 或者 "webgl"
+         * "audioType": "" //使用的音频类型，0:默认，1:qq audio，2:web audio，3:audio
+         * "antialias": //WebGL模式下是否开启抗锯齿，true:开启，false:关闭，默认为false
+         * }
+         **/
+        egret.runEgret({renderMode:"webgl", audioType:0});
+    </script>
+</body>
+</html>

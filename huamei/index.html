@@ -1,0 +1,169 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>寻觅新年味</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no"/>
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="full-screen" content="true"/>
+    <meta name="screen-orientation" content="portrait"/>
+    <meta name="x5-fullscreen" content="true"/>
+    <meta name="360-fullscreen" content="true"/>
+    <style>
+        html, body {
+            -ms-touch-action: none;
+            background: #888888;
+            padding: 0;
+            border: 0;
+            margin: 0;
+            height: 100%;
+        }
+        .wx{
+	    	display: none;
+	    	position: absolute;
+	    	top: 52%;
+	    	bottom: 0px;
+	    	left: 0px;
+	    	right: 0px;
+	    	width:100%;
+	    	height:70px;
+	    	text-align: center;
+	    	vertical-align: middle;
+			color:#525252;
+			font-size:14pt;
+    	}
+    	.wx>img{
+    		width:100%; text-align:center; vertical-align:middle;
+    	}
+    </style>
+
+    <!--这个标签为通过egret提供的第三方库的方式生成的 javascript 文件。删除 modules_files 标签后，库文件加载列表将不会变化，请谨慎操作！-->
+    <!--modules_files_start-->
+	<script egret="lib" src="libs/modules/egret/egret.js" src-release="libs/modules/egret/egret.min.js"></script>
+	<script egret="lib" src="libs/modules/egret/egret.web.js" src-release="libs/modules/egret/egret.web.min.js"></script>
+	<script egret="lib" src="libs/modules/game/game.js" src-release="libs/modules/game/game.min.js"></script>
+	<script egret="lib" src="libs/modules/game/game.web.js" src-release="libs/modules/game/game.web.min.js"></script>
+	<script egret="lib" src="libs/modules/res/res.js" src-release="libs/modules/res/res.min.js"></script>
+	<script egret="lib" src="libs/modules/tween/tween.js" src-release="libs/modules/tween/tween.min.js"></script>
+	<!--modules_files_end-->
+
+    <!--这个标签为不通过egret提供的第三方库的方式使用的 javascript 文件，请将这些文件放在libs下，但不要放在modules下面。-->
+    <!--other_libs_files_start-->
+    <script egret="lib" src="libs/jquery.js" src-release="libs/jquery.js"></script>
+	<script egret="lib" src="libs/ls.js" src-release="libs/ls.js"></script>
+    <!--other_libs_files_end-->
+
+    <!--这个标签会被替换为项目中所有的 javascript 文件。删除 game_files 标签后，项目文件加载列表将不会变化，请谨慎操作！-->
+    <!--game_files_start-->
+	<script egret="game" src="bin-debug/comp/PopView.js"></script>
+	<script egret="game" src="bin-debug/utils/StageUtils.js"></script>
+	<script egret="game" src="bin-debug/comp/CustomImage.js"></script>
+	<script egret="game" src="bin-debug/comp/CustomScrollView.js"></script>
+	<script egret="game" src="bin-debug/comp/Message.js"></script>
+	<script egret="game" src="bin-debug/comp/PopManager.js"></script>
+	<script egret="game" src="bin-debug/LoadingUI.js"></script>
+	<script egret="game" src="bin-debug/model/RewardManager.js"></script>
+	<script egret="game" src="bin-debug/utils/AssetsUtils.js"></script>
+	<script egret="game" src="bin-debug/utils/CountData.js"></script>
+	<script egret="game" src="bin-debug/utils/ErrorCode.js"></script>
+	<script egret="game" src="bin-debug/utils/EventName.js"></script>
+	<script egret="game" src="bin-debug/utils/EventObj.js"></script>
+	<script egret="game" src="bin-debug/utils/GameDispatcher.js"></script>
+	<script egret="game" src="bin-debug/utils/Global.js"></script>
+	<script egret="game" src="bin-debug/utils/HttpService.js"></script>
+	<script egret="game" src="bin-debug/utils/Middle.js"></script>
+	<script egret="game" src="bin-debug/utils/PopUp.js"></script>
+	<script egret="game" src="bin-debug/utils/SoundManager.js"></script>
+	<script egret="game" src="bin-debug/Main.js"></script>
+	<script egret="game" src="bin-debug/view/GameView.js"></script>
+	<script egret="game" src="bin-debug/view/RewardItemView.js"></script>
+	<script egret="game" src="bin-debug/view/RewardListView.js"></script>
+	<script egret="game" src="bin-debug/view/ShareRewardView.js"></script>
+	<script egret="game" src="bin-debug/view/UIManager.js"></script>
+	<script egret="game" src="bin-debug/view/item/MyRewardItemView.js"></script>
+	<script egret="game" src="bin-debug/view/item/WordView.js"></script>
+	<script egret="game" src="bin-debug/view/popup/ActivityDescPop.js"></script>
+	<script egret="game" src="bin-debug/view/popup/ConfirmPop.js"></script>
+	<script egret="game" src="bin-debug/view/popup/ErrorPop.js"></script>
+	<script egret="game" src="bin-debug/view/popup/ExchangePop.js"></script>
+	<script egret="game" src="bin-debug/view/popup/HomePop.js"></script>
+	<script egret="game" src="bin-debug/view/popup/IqiyiPop.js"></script>
+	<script egret="game" src="bin-debug/view/popup/ItemDescPop.js"></script>
+	<script egret="game" src="bin-debug/view/popup/LotteryPop.js"></script>
+	<script egret="game" src="bin-debug/view/popup/MyRewardPop.js"></script>
+	<script egret="game" src="bin-debug/view/popup/SharePop.js"></script>
+	<script egret="game" src="bin-debug/view/popup/SubmitEndPop.js"></script>
+	<script egret="game" src="bin-debug/view/popup/SubmitPop.js"></script>
+	<!--game_files_end-->
+</head>
+<body>
+    
+    <div style="margin: auto;width: 100%;height: 100%;" class="egret-player"
+         data-entry-class="Main"
+         data-orientation="portrait"
+         data-scale-mode="exactFit"
+         data-frame-rate="30"
+         data-content-width="640"
+         data-content-height="1030"
+         data-show-paint-rect="false"
+         data-multi-fingered="99"
+         data-show-fps="false" data-show-log="false"
+         data-show-fps-style="x:0,y:0,size:12,textColor:0xffffff,bgAlpha:0.9">
+    </div>
+	<div class="wx">
+        <p id="iqiyi" style="">AAAA-AAAA-AAAA-AAAA</p>
+    </div>
+    <script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+    <script>
+        /**
+         * {
+         * "renderMode":, //引擎渲染模式，"canvas" 或者 "webgl"
+         * "audioType": "" //使用的音频类型，0:默认，1:qq audio，2:web audio，3:audio
+         * "antialias": //WebGL模式下是否开启抗锯齿，true:开启，false:关闭，默认为false
+         * }
+         **/
+        egret.runEgret({renderMode:"webgl", audioType:0});
+    </script>
+</body>
+<script src="http://res.leasiondata.cn/lstatres/js/ls.js"></script>
+
+<!--官网-->
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?b8f0cbbe743bf30e333f7124886e987e";
+  var s = document.getElementsByTagName("script")[0];
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+<!--欧麦咖-->
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?b6b2d9162bb9c8dc9641944e0768c852";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+<!--金丽莎-->
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?aaf83459b840e40c5dfc45c2614761f7";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-32829403-1', 'auto');
+  ga('send', 'pageview');
+</script>
+</html>
