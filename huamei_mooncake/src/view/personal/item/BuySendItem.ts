@@ -26,7 +26,7 @@ class BuySendItem extends egret.DisplayObjectContainer {
 		this.txtNum.textColor = 0x6E3C0A;
 		this.addChild(this.txtNum);
 
-		this.txtNum.text = Global.names[type - 1] + "";
+		this.txtNum.text = Global.names1[type - 1] + "";
 
 		Global.setBut(this);
 
