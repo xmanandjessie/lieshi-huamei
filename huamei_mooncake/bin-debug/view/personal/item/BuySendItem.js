@@ -32,7 +32,7 @@ var BuySendItem = (function (_super) {
         _this.txtNum.y = 20 - 142;
         _this.txtNum.textColor = 0x6E3C0A;
         _this.addChild(_this.txtNum);
-        _this.txtNum.text = Global.names[type - 1] + "月饼";
+        _this.txtNum.text = Global.names[type - 1] + "";
         Global.setBut(_this);
         _this.addEventListener(egret.TouchEvent.TOUCH_TAP, function () {
             if (BuySendItem.selectItem) {

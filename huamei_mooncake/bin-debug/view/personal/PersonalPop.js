@@ -19,6 +19,9 @@ var PersonalPop = (function (_super) {
     PersonalPop.prototype.setData = function (data) {
         _super.prototype.setData.call(this, data);
         this.initView();
+        setTimeout(function () {
+            PopManager.showPop("MessagePop");
+        }, 1000);
     };
     PersonalPop.prototype.infoHandler = function () {
         PopManager.hidePop("AddressPop");

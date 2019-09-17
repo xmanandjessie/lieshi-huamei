@@ -7,6 +7,10 @@ class PersonalPop extends PopView {
 		super.setData(data);
 
 		this.initView();
+
+		setTimeout(function() {
+			PopManager.showPop("MessagePop");
+		}, 1000);
 	}
 
 	private infoHandler(): void {

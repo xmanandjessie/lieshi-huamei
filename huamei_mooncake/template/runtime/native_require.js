@@ -73,6 +73,7 @@ var game_file_list = [
 	"bin-debug/view/personal/item/InfoOrderItem.js",
 	"bin-debug/view/personal/item/InfoShareItem.js",
 	"bin-debug/view/personal/item/MailItem.js",
+	"bin-debug/view/personal/item/MessagePop.js",
 	"bin-debug/view/personal/item/QueHuoPop.js",
 	"bin-debug/view/select/DetailItem.js",
 	"bin-debug/view/select/DetailSimpleItem.js",

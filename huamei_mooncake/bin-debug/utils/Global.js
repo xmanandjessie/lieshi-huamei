@@ -296,7 +296,7 @@ var Global = (function () {
     Global.RP_Filter = [new egret.GlowFilter(0x4CBFFF, 0.5, 30, 30, 2, 1)];
     Global.QP_Filter = [new egret.GlowFilter(0xA2A2A2, 0.5, 30, 30, 2, 1)];
     Global.AI_Filter = [new egret.GlowFilter(0xCC0000, 0.5, 30, 30, 2, 1)];
-    Global.names = ["华玥佳礼", "煌玥尊礼", "星玥臻礼", "珀玥臻礼", "蛋黄橘皮月", "福月嘉礼", "福月心礼", "福月臻礼", "福月尊礼", "华美大礼包138"];
+    Global.names = ["华玥佳礼", "煌玥尊礼", "星玥臻礼", "珀玥臻礼", "蛋黄橘皮月", "福月嘉礼", "福月心礼", "福月臻礼", "福月尊礼", "华美大礼包138", "华美大礼包188", "华美大礼包238", "华美大礼包288", "华美大礼包398"];
     return Global;
 }());
 __reflect(Global.prototype, "Global");
