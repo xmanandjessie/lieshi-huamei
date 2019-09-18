@@ -404,8 +404,8 @@ class AddressPop extends PopView {
 					obj.recstreet = address;
 					obj.recontact = otherName;
 					obj.recphone = otherPhone;
-					obj.couponkeyfrom = this.data.couponkey;
-					obj.couponkeyto = this.data.couponkey;
+					obj.couponkeyfrom = this.data.couponkeyfrom;
+					obj.couponkeyto = this.data.couponkeyto;
 					obj.usermobile = selfPhone;
 					obj.helloer = selfName;
 					obj.hello = hello;
@@ -465,8 +465,8 @@ class AddressPop extends PopView {
 					obj.recstreet = address;
 					obj.recontact = otherName;
 					obj.recphone = otherPhone;
-					obj.couponkeyfrom = this.data.couponkey;
-					obj.couponkeyto = this.data.couponkey;
+					obj.couponkeyfrom = this.data.couponkeyfrom;
+					obj.couponkeyto = this.data.couponkeyto;
 					obj.usermobile = selfPhone;
 					obj.helloer = selfName;
 					obj.hello = hello;
